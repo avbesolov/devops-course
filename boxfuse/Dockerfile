@@ -7,7 +7,7 @@ WORKDIR /root/projects
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 
 WORKDIR /root/projects/boxfuse-sample-java-war-hello
-RUN mvn package
+RUN mvn clean package
 
 COPY /root/projects/boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps/
 
