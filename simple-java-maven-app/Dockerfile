@@ -4,10 +4,8 @@ RUN apt update && apt upgrade -y && apt install git -y && apt install default-jd
 RUN mkdir projects && cd projects
 RUN git clone https://github.com/avbesolov/docker-test-project.git
 
-WORKDIR /root/projects/docker-test-project/simple-java-maven-app
-
+WORKDIR /root/projects/docker-projects/docker-test-project/simple-java-maven-app
 RUN mvn package
 
-WORKDIR /root/projects/simple-java-maven-app/target
-
+WORKDIR /root/projects/docker-projects/docker-test-project/simple-java-maven-app/target
 CMD ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
