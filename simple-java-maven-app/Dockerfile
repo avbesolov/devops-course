@@ -6,7 +6,7 @@ RUN git clone https://github.com/avbesolov/docker-test-project.git
 
 WORKDIR /root/projects/simple-java-maven-app
 
-RUN mvn validate test package
+RUN mvn package
 
 WORKDIR /root/projects/simple-java-maven-app/target
 
