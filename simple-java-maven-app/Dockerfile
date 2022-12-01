@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 RUN apt update && apt upgrade -y && apt install git -y && apt install default-jdk -y && apt install maven -y
-RUN mkdir projects && cd projects
+RUN mkdir -p projects/docker-projects && cd projects/docker-projects
 RUN git clone https://github.com/avbesolov/docker-test-project.git
 
 WORKDIR /root/projects/docker-projects/docker-test-project/simple-java-maven-app
