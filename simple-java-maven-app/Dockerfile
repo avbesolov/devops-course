@@ -1,7 +1,9 @@
 FROM ubuntu:22.04
 
 RUN apt update && apt upgrade -y && apt install git -y && apt install default-jdk -y && apt install maven -y
-RUN mkdir projects && cd projects
+RUN mkdir projects
+
+WORKDIR /root/projects/
 RUN git clone https://github.com/jenkins-docs/simple-java-maven-app.git
 
 WORKDIR /root/projects/simple-java-maven-app
