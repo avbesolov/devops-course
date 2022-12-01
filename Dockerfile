@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 RUN apt update && apt upgrade -y && apt install git -y && apt install default-jdk -y && apt install maven -y && apt install tomcat9 -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && cd /boxfuse-sample-java-war-hello
