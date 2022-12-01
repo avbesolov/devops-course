@@ -5,7 +5,7 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git && cd
 
 WORKDIR /root/projects/boxfuse-sample-java-war-hello
 
-RUN mvn package
+RUN mvn clean package
 COPY /target/hello-1.0.war /var/lib/tomcat9/webapps/
 
 EXPOSE 8080
