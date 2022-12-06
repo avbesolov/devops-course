@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cd ./files
+
 # Генерация непустых файлов в кодировке base64
 for i in $(seq 1 5)
 do 
