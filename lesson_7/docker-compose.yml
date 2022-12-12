@@ -8,4 +8,4 @@
       
       publish_app:
         image: lesson_7_build_app
-        command: ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
+        command: ["java", "-jar", "/root/projects/simple-java-maven-app/target/my-app-1.0-SNAPSHOT.jar"]
