@@ -1,0 +1,9 @@
+---
+    version: '3.8'
+    services:
+      build_app:
+        build: 
+          dockerfile: ~/projects/devops-course/lesson_3,5,6/docker-projects/simple-java-maven-app/Dockerfile
+          context: mvn_app
+      publish_app:
+        image: my_app:latest
