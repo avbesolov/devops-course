@@ -9,5 +9,5 @@
             name: app:v3
       
       publish_app:
-        image: name
+        image: app:v3
         command: ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
