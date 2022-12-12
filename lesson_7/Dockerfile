@@ -1,5 +1,7 @@
 FROM ubuntu:22.04
 
+LABEL my_app="v3"
+
 RUN apt update && apt upgrade -y && apt install git -y && apt install default-jdk -y && apt install maven -y
 RUN mkdir projects
 
