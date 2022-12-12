@@ -5,7 +5,9 @@
       build_app:
         build: 
           context: .
+          args:
+            name: app:v3
       
       publish_app:
-        image: lesson_7_build_app
+        image: name
         command: ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
