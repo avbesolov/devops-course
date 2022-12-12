@@ -1,8 +1,6 @@
-FROM ubuntu:22.04
+FROM alpine:latest
 
-LABEL my_app="v3"
-
-RUN apt update && apt upgrade -y && apt install git -y && apt install default-jdk -y && apt install maven -y
+RUN apk update && apk upgrade -y && apk add git -y && apk add default-jdk -y && apk add maven -y
 RUN mkdir projects
 
 WORKDIR /root/projects/
