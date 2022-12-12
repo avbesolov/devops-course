@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk upgrade -y && apk add git -y && apk add default-jdk -y && apk add maven -y
+RUN apk update && apk add git && apk add default-jdk && apk add maven
 RUN mkdir projects
 
 WORKDIR /root/projects/
