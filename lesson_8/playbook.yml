@@ -1,0 +1,43 @@
+---
+- name: Building App
+  hosts: dev
+  become: yes
+  gather_facts: false
+
+  tasks:
+  - name: Update all packages to the latest version
+    apt:
+      upgrade: dist
+  
+  - name: Upgrade all packages to the latest version
+    apt:
+      name: "*"
+      state: latest
+
+  - name: Install necessary packages
+    apt:
+      pkg:
+      - git
+      - default-jdk
+      - maven
+
+  - name: Clone git-repo
+    git:
+      repo: https://github.com/jenkins-docs/simple-java-maven-app.git
+      dest: /root/simple-java-maven-app
+
+  - name: Building App
+    shell: "cd /root/simple-java-maven-app && mvn validate test package"
+
+# - name: Publish App
+#   hosts: prod
+#   become: yes
+#   gather_facts: false
+
+#   tasks:
+#   - name: Synchronization using rsync protocol (pull)
+#     synchronize:
+#       # set_remote_user: yes
+#       mode: pull
+#       src: rsync://195.2.67.136/root/simple-java-maven-app/target/my-app-1.0-SNAPSHOT.jar
+#       dest: /root/simple-java-maven-app
