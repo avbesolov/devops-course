@@ -14,11 +14,11 @@
 - Элемент типа **String** "tag_name" - Тэг, с которым образ запушится в registry после сборки
 - Элемент типа **Hidden Parameter** "docker_registry"
 
-<
+```bash
 docker build -t myapp:$tag_name .
 docker tag myapp:$tag_name $docker_registry/myapp:$tag_name
 docker push $docker_registry/myapp:$tag_name
->
+```
 
 ### Джоба pullNstart-job
    
@@ -26,7 +26,7 @@ docker push $docker_registry/myapp:$tag_name
 - Элемент типа **String** "tag_name" - Тэг, с которым образ стянется с registry и на его основе запустится контейнер
 - Элемент типа **Hidden Parameter** "docker_registry"
 
-<
+```bash
 docker pull $docker_registry/myapp:$tag_name
 docker run --name myapp-$tag_name -d -p 8080:80 $docker_registry/myapp:$tag_name
->
+```
