@@ -9,25 +9,33 @@
 ## Инфраструктура состоит из 4-х вм
 
 jenkins
----
+--
 ОС Ubuntu 18.04
+
 IP 195.2.67.136
+
 CPU/RAM/HDD - 3/3/5
 
 nexus
----
+--
 ОС Ubuntu 18.04
+
 IP 195.2.81.37
+
 CPU/RAM/HDD - 4/4/10
 
 dev
----
+--
 ОС Ubuntu 18.04
+
 IP 94.103.89.223
+
 CPU/RAM/HDD - 2/2/5
 
 prod
----
+--
 ОС Ubuntu 18.04
+
 IP 178.20.43.152
+
 CPU/RAM/HDD - 2/2/5
