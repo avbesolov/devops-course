@@ -1,0 +1,27 @@
+pipeline {
+    
+    agent any
+    
+    tools {
+        maven 'm3'
+    }
+    
+    stages {
+        stage ('git clone') {
+            steps {
+                git 'https://github.com/avbesolov/boxfuse-for-devops-course.git'
+            }
+        }
+        stage ('build app') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        stage ('deploy app') {
+            steps {
+                deploy adapters: [tomcat9(credentialsId: '3797a4cd-1bad-4825-9b17-946f64bdb134', path: '', url: 'http://94.103.89.223:8080/')], contextPath: 'my_pipe_app', war: '**/*.war'
+            }
+        }
+    }
+    
+}
