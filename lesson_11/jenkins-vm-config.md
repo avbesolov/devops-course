@@ -2,7 +2,8 @@
 2. apt install docker.io
 3. docker run -d -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
 4. Первоначальная настройка дженкинса. 
-Установка дополнительного плагина для работы с контейнером сервлетов - tomcat9 (Deploy to container)
+- Установка дополнительного плагина для работы с контейнером сервлетов - tomcat9 (Deploy to container)
+- Создание креда для доступа к tomcat9
 5. Создание джобы с типом pipeline и ее настройка
 6. Размещение пайплайна в репозитории - https://github.com/avbesolov/devops-course.git 
 папка lesson_11
