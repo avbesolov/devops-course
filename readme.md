@@ -107,9 +107,9 @@
 
     • Docker registry: native, Artifactory / Nexus
 
-    ДЗ. Упаковка приложения в Docker
+> ДЗ. Упаковка приложения в Docker
 
- 
+
 ### Занятие 7
 
     • Docker практика
